@@ -253,6 +253,12 @@ header nav ul {
   animation: slideUp 0.8s ease-out forwards;
     }
 
+    @media (max-width: 531px) {
+      .hero{
+        height: 100%;
+      }
+    }
+
 @keyframes slideUp {
   to {
     transform: translateY(0); /* Final position */
