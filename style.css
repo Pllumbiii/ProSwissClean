@@ -103,9 +103,12 @@ header {
     padding: 1rem;
   }
 
+
+
   header nav {
     width: 100%;
     justify-content: center;
+    display: flex; flex-direction: column;
   }
 
   nav ul {
