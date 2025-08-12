@@ -193,17 +193,23 @@ a:hover {
 }
 
 @media (max-width: 576px) {
-  .services-grid {
+ .services-grid {
     max-width: 100%;
     grid-template-columns: 1fr;
   }
 
-   header{
-     color: #dbe7ef;
-    text-decoration:none;
-    margin:0 0px;
-    font-weight:600;
-    font-size:2.5rem;
+  header {
+    padding: 36px 10px; /* taller header */
+  }
+
+  .logo img {
+    width: 100px !important; /* much bigger logo */
+    height: auto;
+  }
+
+  #shigjeta {
+    font-size: 3rem; /* bigger back arrow */
+    padding-right: 10px;
   }
 }
 
