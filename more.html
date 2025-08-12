@@ -1,0 +1,249 @@
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+  header{
+    background:#354b61;
+    color:white;
+    padding:18px 20px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  header .logo { font-weight:700; letter-spacing:0.4px;}
+  header nav a{
+    color: #dbe7ef;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:600;
+    font-size:0.95rem;
+  }
+
+    /* Services Section */
+.services-container {
+  max-width: 600px;
+  margin-top: auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 500px;
+}
+
+main{
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services-container h2 {
+  background-color: #2c3e50; /* Your header/nav color */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.services-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-container ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.services-container ul li:last-child {
+  border-bottom: none;
+}
+
+.services-container ul li:hover {
+  background-color: #2c3e50;
+  color: white;
+  cursor: pointer;
+}
+
+  a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #0077b6; /* example custom color */
+}
+
+.logo{
+ margin-right: 30px; 
+}
+
+.section{
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.hidden{
+    transform: translateY(50px);
+  opacity: 0;
+}
+
+.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.services-section {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* fixed height for 50/50 split */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.service-card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover; /* fills top half neatly */
+}
+
+.service-content {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #2d3e50;
+}
+
+.service-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+</style>
+<header>
+    <a href="./index.html">←</a>
+  <nav class="logo" aria-label="Main navigation">
+    <a href="index.html"><img src="./logoW.png" width="70px" alt=""></a>
+  </nav>
+</header>
+<main>
+  <section class="services-section section hidden">
+    <h2>mehr</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img src="https://www.moritz-gebaeudereinigung.de/wp-content/uploads/fassade-vergleich.jpg" alt="Gebäudereinigung">
+      <p><b>Vorher:</b> <i>Verschmutzte Fassade mit Ablagerungen.</i> <br>
+<b>Nachher:</b> <i>Strahlend saubere und gepflegte Außenwände.</i></p>
+      </div>
+
+     <div class="service-card">
+        <img src="https://hkncleaningservices.com/wp-content/uploads/2022/05/Cleaning-Services-Before-and-After-Photos-5.jpeg" alt="Gebäudereinigung">
+      <p><b>Vorher:</b> <i>Unordentliches und staubiges Büro.</i> <br>
+<b>Nachher:</b> <i>Sauberer, organisierter und frischer Arbeitsplatz.</i></p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://images.squarespace-cdn.com/content/v1/5c19abcde74940df765ba7e9/488acaf9-fc8e-4a8e-8215-cf2c8046cb8e/Bathtub-before-cleaning-and-after-picture.png" alt="Gebäudereinigung">
+      <p><i>"Gründliche Badewannenreinigung für strahlenden Glanz."</i></p>
+      </div>
+
+     <div class="service-card">
+        <img src="https://live.staticflickr.com/4068/5156498714_c2bc95df9a_z.jpg" alt="Gebäudereinigung">
+      <p><i>"Saubere Zimmer für mehr Wohlfühlatmosphäre."</i></p>
+      </div>
+
+     <div class="service-card">
+        <img src="https://media.istockphoto.com/id/1387895804/photo/unfinished-raw-and-newly-remodeled-room-of-house-before-and-after-with-wood-floors-moulding.jpg?s=612x612&w=0&k=20&c=UNbRBCNJBp1dsZbJHsM5Yb0faKL6UlzM0-4_modWl7s=" alt="Gebäudereinigung">
+      <p><i>„Ein neuer Anstrich verleiht Ihren Räumen frische Farben und schafft eine angenehme Atmosphäre – für ein Zuhause, in dem man sich wirklich wohlfühlt.“</i></p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://partner.gira.de/abbildungen/gira-magazin-fassaden-reinigung-hermes-fassadenreinigung-vorher-nachher-hero_27099_1692094942.webp" alt="Fassadenreinigung">
+        <p><i>„Die gründliche Reinigung der Außenwände entfernt Schmutz, Algen und Ablagerungen – für ein frisches, gepflegtes Erscheinungsbild Ihres Hauses.“</i></p>
+      </div>
+
+   <div class="service-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSot6LjXiL1aIPz1Xep2_0ThD1LU68QT5787Q&s" alt="Gebäudereinigung">
+      <p><i>„Blätter entfernen für einen gepflegten und ordentlichen Garten.“</i></p>
+      </div>
+
+     <div class="service-card">
+        <img src="https://t4.ftcdn.net/jpg/05/23/16/83/360_F_523168323_TWOlSgZuDZW17WVSBo1YtDir6qXJQObd.jpg" alt="Gebäudereinigung">
+      <p>„Eine gründliche Reinigung des Küchenbodens sorgt für hygienische Sauberkeit und einen glänzenden, einladenden Raum, in dem Kochen Spaß macht.“</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+<script>
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // Only animate once
+    }
+  });
+}, {
+  threshold: 0.15 // trigger when 15% of section is visible
+});
+
+// Select every section inside main and observe it
+document.querySelectorAll('main .section').forEach(sec => {
+  observer.observe(sec);
+});
+</script>

@@ -1,0 +1,261 @@
+<style>
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+
+  header{
+    background:#354b61;
+    color:white;
+    padding:18px 20px;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+  }
+  header .logo { font-weight:700; letter-spacing:0.4px;}
+  header nav a{
+    color: #dbe7ef;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:600;
+    font-size:0.95rem;
+  }
+
+    /* Services Section */
+.services-container {
+  max-width: 600px;
+  margin-top: auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  width: 500px;
+}
+
+main{
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services-container h2 {
+  background-color: #2c3e50; /* Your header/nav color */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.services-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.services-container ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.services-container ul li:last-child {
+  border-bottom: none;
+}
+
+.services-container ul li:hover {
+  background-color: #2c3e50;
+  color: white;
+  cursor: pointer;
+}
+
+  a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #0077b6; /* example custom color */
+}
+
+.logo{
+ margin-right: 30px; 
+}
+
+.section{
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+.hidden{
+    transform: translateY(50px);
+  opacity: 0;
+}
+
+.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.services-section {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  height: 300px; /* fixed height for 50/50 split */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.service-card img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover; /* fills top half neatly */
+}
+
+.service-content {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-content h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #2d3e50;
+}
+
+.service-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+@media (max-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+</style>
+<header>
+    <a href="./index.html">←</a>
+  <nav class="logo" aria-label="Main navigation">
+    <a href="index.html"><img src="./logoW.png" width="70px" alt=""></a>
+  </nav>
+</header>
+<main>
+  <section class="services-section section hidden">
+    <h2>Unsere Leistungen</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img src="https://www.gfg-gebaeudedienste.de/de-wAssets/img/leistungen/weblication/wThumbnails/91ad59864ee6755gb5411c1a7301b9db@2x.jpg" alt="Gebäudereinigung">
+        <h3>Gebäudereinigung</h3>
+        <p>"Gründliche und zuverlässige Gebäudereinigung vom Profi"</p>
+      </div>
+
+      <div class="service-card ">
+        <img src="https://www.remaconcept.de/hubfs/Blog/Blogartikel_Titelbilder/Unterhaltsreinigung.jpg" alt="Unterhaltsreinigung">
+        <h3>Unterhaltsreinigung</h3>
+        <p>"Regelmäßige Reinigung für dauerhaft gepflegte Räume."</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://volki-clean.ch/wp-content/uploads/2023/12/Wohnungsraeumung-Zimmer-mit-Karton.webp" alt="Umzugsreinigung">
+        <h3>Umzugsreinigung</h3>
+        <p>"Gründliche Reinigung für einen stressfreien Umzug."</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://static.wixstatic.com/media/56ccf9_afb8ff88943d42b6bb0a57edff52e385~mv2.jpg/v1/fill/w_640,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/56ccf9_afb8ff88943d42b6bb0a57edff52e385~mv2.jpg" alt="Büroreinigungen">
+        <h3>Büroreinigungen</h3>
+        <p>Saubere Arbeitsplätze für ein produktives Arbeitsumfeld.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/ghk100120reportfeature-003-1599838411.png" alt="Malen">
+        <h3>Malen</h3>
+        <p>Frische Farben für Innen- und Außenbereiche – präzise und sauber.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://partner.gira.de/abbildungen/gira-magazin-fassaden-reinigung-hermes-fassadenreinigung-vorher-nachher-hero_27099_1692094942.webp" alt="Fassadenreinigung">
+        <h3>Fassadenreinigung</h3>
+        <p>Effektive Reinigung von Außenfassaden – für einen gepflegten Eindruck.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/a0/a0781938-05d2-4cfe-8960-7164c2c8ee15?rule=$_59.AUTO" alt="Arealreinigung">
+        <h3>Arealreinigung</h3>
+        <p>Reinigung von Außenanlagen, Wegen und Parkplätzen.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://www.piepenbrock.de/blog/wp-content/uploads/slider-startseite-bauschlussreinigung.jpg" alt="Sonderreinigung">
+        <h3>Baureinigung</h3>
+        <p>"Saubere Baustellen für einen reibungslosen Abschluss."</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://www.fawas.de/wp-content/uploads/2020/10/Feinstaub-aus-dem-Haus-saugen-original-1030x687.jpg" alt="Sonderreinigung">
+        <h3>Feinstaub</h3>
+        <p>„Effektive Entfernung von Feinstaub für saubere Luft.“</p>
+      </div>
+
+    </div>
+  </section>
+</main>
+<script>
+  const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target); // Only animate once
+    }
+  });
+}, {
+  threshold: 0.15 // trigger when 15% of section is visible
+});
+
+// Select every section inside main and observe it
+document.querySelectorAll('main .section').forEach(sec => {
+  observer.observe(sec);
+});
+</script>
