@@ -1,3 +1,8 @@
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="logoW.png">
+</head>
 <style>
     body{
         display: flex;
@@ -160,56 +165,98 @@ a:hover {
   color: #555;
 }
 
-@media (max-width: 992px) {
+
+
+@media (max-width: 768px) {
+  .services-section {
+    padding: 20px;
+  }
+
   .services-grid {
-    max-width: 100%;
     grid-template-columns: 1fr;
-  }
-  
-
-  header{
-     color: #dbe7ef;
-    text-decoration:none;
-    margin:0 0px;
-    font-weight:600;
-    font-size:2.5rem;
-  }
+    gap: 25px;
   }
 
-
-@media (max-width: 650px) {
-  .services-grid {
-    max-width: 100%;
-    grid-template-columns: 1fr;
+  .service-card {
+    height: 400px; /* Taller cards */
   }
 
-   header{
-     color: #dbe7ef;
-    text-decoration:none;
-    margin:0 0px;
-    font-weight:600;
-    font-size:2.5rem;
+  .service-card img {
+    height: 55%; /* Adjust image portion */
+  }
+
+  .service-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-content p {
+    font-size: 1rem;
   }
 }
 
+
 @media (max-width: 576px) {
- .services-grid {
-    max-width: 100%;
-    grid-template-columns: 1fr;
+  /* Stack cards vertically */
+  .services-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .service-card {
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .service-card img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .service-content {
+    padding: 15px;
+  }
+
+  .service-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .service-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .services-section {
+    padding: 20px 10px;
+  }
+
+  main {
+    padding-top: 100px; /* makes space for fixed header */
   }
 
   header {
-    padding: 36px 10px; /* taller header */
+    display: flex;
+    align-items: center;
+    padding: 25px 15px;
+    font-size: 1rem;
   }
 
   .logo img {
-    width: 100px !important; /* much bigger logo */
-    height: auto;
+    width: 70px;
   }
 
-  #shigjeta {
-    font-size: 3rem; /* bigger back arrow */
-    padding-right: 10px;
+  .shigjeta {
+    font-size: 2rem;
+    margin-bottom: 10px;
   }
 }
 
@@ -284,7 +331,7 @@ a:hover {
   </section>
 </main>
 <script>
-  const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('show');
@@ -292,7 +339,8 @@ a:hover {
     }
   });
 }, {
-  threshold: 0.15 // trigger when 15% of section is visible
+  threshold: 0.00, // Trigger when 10% of section is visible
+  rootMargin: '0px 0px -100px 0px' // Start observing when the section is 100px before it reaches the viewport
 });
 
 // Select every section inside main and observe it

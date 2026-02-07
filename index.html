@@ -4,20 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Pro Swiss Clean</title>
-  <link rel="icon" type="image/png" href="logoW.png">
+  <link rel="icon" type="image/x-icon" href="logo.png">
 
+
+  
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <link rel="stylesheet" href="./style.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=apartment" />
+ <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "https://www.proswissclean.ch",
+    "logo": "https://www.proswissclean.ch/logo.png",
+    "name": "Pro Swiss Clean"
+  }
+  </script>
 </head>
 <body>
   <div id="splash-screen">
     <img src="logo.png" alt="Logo" id="splash-logo">
+    <h1>Pro Swiss Clean</h1>
   </div>
 
   <div id="main-content" style="display: none;">
     <header id="header">
     <h1><img src="./logoW.png" alt="logo" width="70px"></h1>
+    <button id="menu-toggle" class="menu-toggle" aria-label="Menu">&#9776;</button>
     <nav>
       <ul>
         <li><a href="index.html">Hauptseite</a></li>
@@ -33,9 +46,10 @@
   <main>
     <!-- Hero Section -->
   <div class="hero">
-    <h1>"Ihr Raum, Unsere Leidenschaft – Professionelle Reinigung, der Sie vertrauen können"</h1>
+    <div class="hero-text-wrapper ">
+      <b>Ihr Raum, Unsere Leidenschaft – Professionelle Reinigung, der Sie vertrauen können</b>
     <p>Schnelle und umweltfreundliche Reinigungsdienste.</p>
-    <a href="#header">Buchen Sie jetzt</a>
+    </div>
   </div>
 
   <!-- About Us -->
@@ -128,8 +142,14 @@ Willkommen bei ProSwissClean, Ihrem zuverlässigen Partner für professionelle R
       <label for="Phone number">Telefonnummer:</label>
       <input type="text" id="pNumber" name="Phone number" required />
 
+<label for="message">Nachricht an uns(optional):</label>
+  <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea>
+
+
+
+
       <label for="service">Wählen Sie einen Dienst aus:</label>
-      <select id="service" name="service" required>
+      <select id="service" name="service" required >
         <option value="">-- Wählen Sie einen Dienst aus --</option>
         <option value="Gebäudereinigung">Gebäudereinigung</option>
         <option value="Unterhaltsreinigung">Unterhaltsreinigung</option>
@@ -142,6 +162,8 @@ Willkommen bei ProSwissClean, Ihrem zuverlässigen Partner für professionelle R
         <option value="Feinstaub">Feinstaub</option>
       </select>
 
+      <div id="selectedServices" style="margin-top: 10px;"></div>
+
       <button type="submit" style="background-color: lightblue; color: black;">schicken</button>
     </form>
     <p id="statusMessage"></p>
@@ -151,6 +173,6 @@ Willkommen bei ProSwissClean, Ihrem zuverlässigen Partner für professionelle R
     <p>&copy; 2025 ProSwissClean</p>
   </footer>
   </div>
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
